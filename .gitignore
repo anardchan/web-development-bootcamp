@@ -11,4 +11,6 @@ S10 Grid/*
 S11 Bootstrap/*
 S19 jQuery/*
 S23 Nodejs/*
+node_modules/
+package-lock.json
 .DS_Store
