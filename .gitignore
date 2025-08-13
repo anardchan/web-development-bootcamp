@@ -14,4 +14,5 @@ S23 Nodejs/*
 node_modules/
 package-lock.json
 S24 Express JS with Node JS/*
+S25 EJS/*
 .DS_Store
