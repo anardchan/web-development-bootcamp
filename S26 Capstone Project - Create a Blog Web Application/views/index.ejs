@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+
+<div id="page-header">
+  <h1>Blog Host</a></h1>
+  <a href="/blogs/new"><button class="green-hover">Create Post</button></a>
+</div>
+    
+<hr />
+
+    <% if (locals.blogs && (locals.blogs.length > 0)) { %>
+    <h2>All Posts</h2>
+    <% } else { %>
+    <h2> There are no blogs posts yet. Try creating a post 🤓</h2>
+    <% } %>
+    <% if (locals.blogs && locals.blogs.length > 0) { %>
+      <div class="blog-cards">
+<% for (let i = 0; i < blogs.length; i++) { %>
+        <form action="/blogs/<%= i %>" method="post">
+          <div class="blog-card">
+            <h3 class="blog-card-title"><%= blogs[i].title %></h3>
+            <p class="blog-card-date">Date: <%= blogs[i].date %></p>
+            <p class="blog-card-content"><%= blogs[i].content %></p>
+            <button class="blog-card-read-more" type="button" data-method="GET">Read More</button>
+            <a class="blog-card-edit" href="/blogs/edit/<%= i %>"><button type="button">Edit</button></a>
+            <button class="blog-card-delete red-hover" type="button" data-method="DELETE">Delete</button>
+          </div>
+        </form>
+      <% } %>
+      </div>
+      
+    <% } %>
+
+<%- include("partials/footer.ejs") %>
+
+<script src="/js/blogCardActions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<%- include("../partials/header.ejs") %>
+    <div id="page-header">
+      <h1>Blog Host</h1>
+      <a href="/"><button>Back to Home</button></a>
+    </div>
+
+    <hr>
+
+    <form action="/blogs" method="POST">
+      <div class="blog-input-page">
+        <label class="blog-title-label" >Title</label>
+        <input class="blog-title"  type="text" name="blogTitle" required />
+        <label class="blog-content-label"  for="blogContent">Content</label>
+        <textarea rows="8" class="blog-content" name="blogContent" id="blogContent" required></textarea>
+        <!-- <textarea name="blogContent" required /> -->
+      </div>
+      <a href="/"><button type="button">Cancel</button></a>
+      <button class="green-hover" type="submit">Publish Post</button>
+    </form>
+
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
