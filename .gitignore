@@ -16,6 +16,7 @@ S25 EJS/*
 S30 Build Your Own API/30.0 DIY API/JokeAPI.postman_collection.json
 S30 Build Your Own API/30.1 Blog API Project/solution.js
 S33 PostgreSQL/33.2 World Capital Quiz/*
+S33 PostgreSQL/33.3 Travel Tracker/*
 package-lock.json
 node_modules/
 .DS_Store
